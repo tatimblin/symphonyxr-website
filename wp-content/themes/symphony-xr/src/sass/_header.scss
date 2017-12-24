@@ -1,2 +1,49 @@
 // Header
 // -------------------------
+
+.skip-link {
+    display: none;
+}
+
+.site-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: $screen-md;
+    margin: 0 auto;
+    padding: $spacing/2;
+    &:after{
+        content:'';
+        position: absolute;
+        bottom: 0; left: $spacing/2; right: $spacing/2;
+        border-bottom: 1px solid $black;}
+}
+
+.site-title {
+    .logo {
+        display: block;
+        width: 44px; height: 44px;
+        background-color: $midBg;
+    }
+}
+
+#primary-menu {
+    ul {
+        margin: 0;
+        li {
+            display: inline-block;
+            margin: 0;
+            margin-right: $spacing;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                font-family: $body;
+                font-weight: $heavyWeight;
+                text-decoration: none;
+                color: $text;
+            }
+        }
+    }
+}

@@ -2,3 +2,74 @@
 // -------------------------
 
 @import url('https://fonts.googleapis.com/css?family=Cardo:700|Montserrat:300,500i,600');
+
+h1, h2, h3, h4 {
+    margin-bottom: $spacing;
+    color: $text;
+    font-family: $heading;
+    font-weight: $heavyWeight;
+    line-height: 1.33em;
+    letter-spacing: 0.66px;
+}
+h5, h6 {
+    margin-bottom: $spacing / 2;
+    color: lighten($text, 20%);
+    font-family: $body;
+    font-weight: $midWeight;
+    line-height: 1.25em;
+}
+h1 {
+    font-size: 40px;
+    @include query($screen-xs) {font-size: 40px;}
+    @include query($screen-sm) {font-size: 70px;}
+    @include query($screen-md) {font-size: 85px;}
+    @include query($screen-lg) {font-size: 85px;}
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 30px;
+    @include query($screen-xs) {font-size: 30px;}
+    @include query($screen-sm) {font-size: 36px;}
+    @include query($screen-md) {font-size: 48px;}
+    @include query($screen-lg) {font-size: 60px;}
+}
+h3 {
+    font-size: 24px;
+    @include query($screen-xs) {font-size: 24px;}
+    @include query($screen-sm) {font-size: 28px;}
+    @include query($screen-md) {font-size: 36px;}
+    @include query($screen-lg) {font-size: 36px;}
+}
+h4 {
+    font-size: 18px;
+    @include query($screen-xs) {font-size: 18px;}
+    @include query($screen-sm) {font-size: 22px;}
+    @include query($screen-md) {font-size: 28px;}
+    @include query($screen-lg) {font-size: 28px;}
+}
+h5 {
+    font-size: 30px;
+    @include query($screen-xs) {font-size: 30px;}
+    @include query($screen-sm) {font-size: 36px;}
+    @include query($screen-md) {font-size: 48px;}
+    @include query($screen-lg) {font-size: 60px;}
+}
+h6 {
+    font-size: 24px;
+    @include query($screen-xs) {font-size: 24px;}
+    @include query($screen-sm) {font-size: 28px;}
+    @include query($screen-md) {font-size: 36px;}
+    @include query($screen-lg) {font-size: 36px;}
+}
+
+p, ul, li {
+    margin: 0 0 $spacing 0;
+    color: lighten($text, 35%);
+    font-size: 18px;
+    @include query($screen-md) {font-size: 16px;}
+    font-family: $body;
+    font-weight: $lightWeight;
+    line-height: 1.66em;
+}
+
+

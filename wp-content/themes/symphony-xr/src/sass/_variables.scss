@@ -1,89 +1,64 @@
-// Colors
-// -------------------------
-$white: #fff !default;
-$black: #000 !default;
+// ### TYPOGRAPHY ###
+// -----------------------------------------
 
-$bodyBackground: $white !default;
-$textColor: $black !default;
+$heading: "Cardo", serif;
+$body: "Montserrat", sans-serif;
 
-
-// Links
-// -------------------------
-$linkColor: $black !default;
-$linkColorVisited: $black !default;
-$linkColorHover: $black !default;
-$linkColorActive: $black !default;
+$lightWeight: 300;
+$midWeight:   500;
+$heavyWeight: 700;
 
 
-// Transitions
-// -------------------------
-$cbTrans: cubic-bezier(0.165, 0.84, 0.44, 1);
+// ### COLORS ###
+// -----------------------------------------
+
+$dark: #2B2B2B ;
+$black: #2B2B2B ;
+$white: #fefefe ;
+
+// Material Colors (500)
+$red:    #F44336 ;
+$blue:   #2196F3 ;
+$green:  #4CAF50 ;
+$purple: #673AB7 ;
+$orange: #FF9800 ;
+$grey:   #607D8B ;
+
+$brand:  #00c1ff;
+$brandAlt: #FC3E7C;
+
+$bg: #f2f2f2 ;
+$lightBg: darken($bg, 10%);
+$midBg: darken($bg, 20%);
+$text: $black;
+$h-text: $brand;
+$p-text: $black;
 
 
-// Kerning
-// -------------------------
-$kerning50: 1px;
-$kerning100: 2px;
-$kerning150: 3px;
+// ### SIZINGS ###
+// -----------------------------------------
 
+$screen-xs:  480px;
+$screen-sm:  768px;
+$screen-md:  992px;
+$screen-lg: 1220px;
 
-// Typograohy
-// -------------------------
-$fontFamily: Helvetica, Arial, sans-serif !default;
-$serifFontFamily: Georgia, serif !default;
+$spacing: 30px;
 
-$baseFontSize: 18px !default;
-$baseFontFamily: $fontFamily !default;
-$baseLineHeight: 1.8 !default;
-$baseMargin: 24px;
+$container-xs: $screen-xs + $spacing; 
+$container-sm: $screen-sm + $spacing;
+$container-md: $screen-md + $spacing * 2;
+$container-lg: $screen-lg + $spacing * 2;
 
-$headingsFontFamily: serif !default;
-$headingsFontWeight: 700 !default;
-$headingsColor: inherit !default;
-
-
-// Media Queries Breakpoints
-// --------------------------------------------------
-
-// Extra small screen / phone
-$screen-xs:                  480px !default;
-$screen-phone:               $screen-xs !default;
-
-// Small screen / tablet
-$screen-sm:                  768px !default;
-$screen-tablet:              $screen-sm !default;
-
-// Medium screen / desktop
-$screen-md:                  992px !default;
-$screen-desktop:             $screen-md !default;
-
-// Large screen / wide desktop
-$screen-lg:                  1220px !default;
-$screen-lg-desktop:          $screen-lg !default;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm - 1) !default;
-$screen-sm-max:              ($screen-md - 1) !default;
-$screen-md-max:              ($screen-lg - 1) !default;
-
-// Grid system
-// --------------------------------------------------
-
-// Number of columns in the grid system
-$grid-columns:              12 !default;
-// Padding, to be divided by two and applied to the left and right of all columns
-$grid-gutter-width:         30px !default;
-// Point at which the navbar stops collapsing
-$grid-float-breakpoint:     $screen-tablet !default;
-
-// Container sizes
-// --------------------------------------------------
-
-// Small screen / tablet
-$container-tablet:            ((720px + $grid-gutter-width)) !default;
-
-// Medium screen / desktop
-$container-desktop:           ((940px + $grid-gutter-width)) !default;
-
-// Large screen / wide desktop
-$container-lg-desktop:        ((1140px + $grid-gutter-width)) !default;
+// Use media queries like this:
+// @include query($screen-sm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}

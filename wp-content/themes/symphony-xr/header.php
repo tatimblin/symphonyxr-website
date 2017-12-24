@@ -41,18 +41,13 @@
 
 	<div class="site-header">
 		<div class="site-title">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><span class="screen-reader"><?php bloginfo( 'name' ); ?></span></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
+                
+            </a>
 		</div><!-- .site-title -->
 
 		<div class="main-navigation">
-			<a href="#" class="main-nav-toggle">
-				<span class="screen-reader">Main Navigation</span>
-				<span class="menu-icon">
-					<span class="menu-slice menu-slice-1"></span>
-					<span class="menu-slice menu-slice-2"></span>
-					<span class="menu-slice menu-slice-3"></span>
-				</span>
-			</a>
+			
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div><!-- .main-navigation -->
 	</div><!-- .site-header -->
