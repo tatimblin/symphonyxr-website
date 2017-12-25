@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Homepage Template
+ * Template Name: Product Template
  *
  * @package starter_theme
  */

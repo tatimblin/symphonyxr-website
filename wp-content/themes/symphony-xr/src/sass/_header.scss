@@ -29,21 +29,55 @@
 }
 
 #primary-menu {
-    ul {
+    margin: 0;
+    li {
+        display: inline-block;
         margin: 0;
-        li {
-            display: inline-block;
-            margin: 0;
-            margin-right: $spacing;
-            &:last-child {
-                margin-right: 0;
-            }
-            a {
-                font-family: $body;
-                font-weight: $heavyWeight;
-                text-decoration: none;
-                color: $text;
-            }
+        margin-right: $spacing;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            font-family: $body;
+            font-weight: $heavyWeight;
+            text-decoration: none;
+            color: $text;
         }
     }
 }
+
+
+// -----------
+// HERO
+// -----------
+
+.hero {
+    height: 506px;
+    &-title {
+        max-width: $screen-md;
+        margin: 0 auto;
+        &-content {
+            display: inline-block;
+            padding: 0 $spacing/2;
+            background-color: $bg;
+            h1 {
+                text-transform: capitalize;
+                line-height: 1em;
+            }
+        }
+        &-cta {
+            position: absolute;
+            margin: $spacing 0;
+        }
+        z-index: 10;
+    }
+    &-img {
+        position: absolute;
+        width: 100%; height: 400px;
+        background-color: $lightBg;
+        transform: translateY(-70px);
+        z-index: -1;
+    }
+}
+
+

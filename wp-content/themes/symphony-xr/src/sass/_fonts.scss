@@ -3,7 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cardo:700|Montserrat:300,500i,600');
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     margin-bottom: $spacing;
     color: $text;
     font-family: $heading;
@@ -11,13 +11,21 @@ h1, h2, h3, h4 {
     line-height: 1.33em;
     letter-spacing: 0.66px;
 }
-h5, h6 {
+h4, h5, h6 {
     margin-bottom: $spacing / 2;
-    color: lighten($text, 20%);
+    //color: lighten($text, 20%);
     font-family: $body;
     font-weight: $midWeight;
     line-height: 1.25em;
 }
+
+h4 {
+    margin: 0;
+    font-style: italic;
+    line-height: 3em;
+    letter-spacing: .75px;
+}
+
 h1 {
     font-size: 40px;
     @include query($screen-xs) {font-size: 40px;}
@@ -41,11 +49,11 @@ h3 {
     @include query($screen-lg) {font-size: 36px;}
 }
 h4 {
-    font-size: 18px;
-    @include query($screen-xs) {font-size: 18px;}
-    @include query($screen-sm) {font-size: 22px;}
-    @include query($screen-md) {font-size: 28px;}
-    @include query($screen-lg) {font-size: 28px;}
+    font-size: 14px;
+    @include query($screen-xs) {font-size: 16px;}
+    @include query($screen-sm) {font-size: 18px;}
+    @include query($screen-md) {font-size: 20px;}
+    @include query($screen-lg) {font-size: 20px;}
 }
 h5 {
     font-size: 30px;
