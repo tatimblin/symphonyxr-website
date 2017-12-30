@@ -11,11 +11,7 @@ get_header(); ?>
     
     <?php get_template_part( 'template-parts/content', 'hero' ); ?>
             
-		<?php
-		while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content', 'page' );
-		endwhile; // End of the loop.
-		?>
+	<?php get_template_part( 'template-parts/content', 'about' ); ?>
 
 	</div><!-- #main -->
 

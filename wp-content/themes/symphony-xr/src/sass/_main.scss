@@ -4,3 +4,46 @@
 body {
     background-color: $bg;
 }
+
+
+// ABOUT
+
+.about {
+    max-width: $screen-md;
+    margin: $spacing*3 auto;
+    &-heading {
+        padding: 0 $spacing/2;
+    }
+    &-inner {
+        position: relative;
+    }
+    &-body {
+        max-width: $screen-sm;
+        margin: 0 auto;
+        padding: 0 $spacing*2;
+        @include bigger($screen-sm) {
+            column-count: 2;
+            column-gap: $spacing;
+        }
+    }
+    &-tag {
+        @include bigger($screen-md) {
+            position:absolute;
+            right: 0; top: 0;
+        }
+        ul {
+            li {
+                margin: 0;
+                @include smaller($screen-md) {
+                    display: inline-block;
+                    margin: 0 $spacing/2;
+                }
+                list-style: none;
+                font-family: $body, sans-serif;
+                font-weight: $heavyWeight;
+                color: $black;
+                line-height: 2.5em;
+            }
+        }
+    }
+}

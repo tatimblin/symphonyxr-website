@@ -35,11 +35,11 @@ h1 {
     text-transform: uppercase;
 }
 h2 {
-    font-size: 30px;
-    @include query($screen-xs) {font-size: 30px;}
-    @include query($screen-sm) {font-size: 36px;}
-    @include query($screen-md) {font-size: 48px;}
-    @include query($screen-lg) {font-size: 60px;}
+    font-size: 24px;
+    @include query($screen-xs) {font-size: 24px;}
+    @include query($screen-sm) {font-size: 32px;}
+    @include query($screen-md) {font-size: 36px;}
+    @include query($screen-lg) {font-size: 40px;}
 }
 h3 {
     font-size: 24px;

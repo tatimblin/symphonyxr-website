@@ -19,7 +19,7 @@
             <div class="hero-title-cta">
             <?php while( have_rows('hero_cta') ): the_row(); ?>
                 <div class="button">
-                    <?php the_sub_field('hero_cta_text'); ?>hey
+                    <?php the_sub_field('hero_cta_text'); ?>
                 </div>
             <?php endwhile; ?>
             </div>

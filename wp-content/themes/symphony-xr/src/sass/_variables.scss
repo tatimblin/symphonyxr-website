@@ -62,3 +62,15 @@ $container-lg: $screen-lg + $spacing * 2;
         @content;
     }
 }
+
+@mixin bigger($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin smaller($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
