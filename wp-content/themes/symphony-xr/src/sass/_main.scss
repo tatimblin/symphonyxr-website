@@ -29,7 +29,7 @@ body {
     &-tag {
         @include bigger($screen-md) {
             position:absolute;
-            right: 0; top: 0;
+            right: $spacing/2; top: 0;
         }
         ul {
             li {
@@ -46,4 +46,76 @@ body {
             }
         }
     }
+}
+
+// TIMELINE
+
+.timeline {
+    background-color: $lightBg;
+    &-heading {
+        display: flex;
+        justify-content: space-between;
+        max-width: $screen-md;
+        margin: 0 auto;
+        padding: $spacing $spacing/2 0 $spacing/2;
+    }
+    &-bar {
+        padding: 0 0 $spacing/2 $spacing/2;
+        @include bigger($screen-sm) {
+            position: relative;
+            padding: 0 0 $spacing/2 0;
+            &:before {
+                content:'';
+                position: absolute;
+                width: 100%; height: 1px;
+                top: 2.45em;
+                right: 0;
+                margin: 0 $spacing/2 0 0;
+                @include bigger($screen-md){margin: 0 $spacing 0 0;}
+                background-color: $black;
+            }
+        }
+        &-item {
+            position: relative;
+            p {
+                padding: 0 0 0 $spacing;
+                color: $black;
+                font-weight: $heavyWeight;
+                span {
+                    display: block;
+                    font-size: 0.66em;
+                    color: lighten($text, 35%);
+                    font-weight: $midWeight;
+                }
+            }
+            &:before {
+                content:'';
+                position: absolute;
+                bottom: 8px;
+                width: 15px; height: 15px;
+                border: 1px solid $black;
+                border-radius: 50%;
+                background-color: $lightBg;
+            }
+        }
+        @include bigger($screen-sm) {
+            display: flex;
+            justify-content: space-around;
+            &-item {
+                p {
+                    padding: 0;
+                    span {
+                        margin-bottom: $spacing;
+                    }
+                }
+                &:before {
+                    top: 2em;
+                }
+            }
+        }
+    }
+}
+
+.tl-complete:before {
+    background-color: $black;
 }
