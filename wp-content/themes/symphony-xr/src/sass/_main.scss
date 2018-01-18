@@ -119,3 +119,53 @@ body {
 .tl-complete:before {
     background-color: $black;
 }
+
+
+// Gallery
+
+.gallery {
+    width: 100%;
+    background-color: $black;
+    &-cell {
+        margin: 0 auto;
+        width: 70%; height: 40vw;
+        background-size: cover;
+        background-position: center center;
+        transition: opacity 600ms 300ms $ease;
+        &:not(.is-selected) {
+            opacity: 0.2;
+            transition: opacity 400ms $ease;
+        }
+    }
+}
+
+
+// CTA
+
+.cta {
+    max-width: $screen-md;
+    margin: 0 auto;
+    padding: $spacing 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include bigger($screen-xs) {
+        flex-direction: row;
+    }
+    &-callout {
+        padding: 0 $spacing/2;
+    }
+    &-action {
+        @include bigger($screen-xs) {
+            margin: 0 $spacing/2;
+        }
+    }
+}
+
+
+
+
+
+
+

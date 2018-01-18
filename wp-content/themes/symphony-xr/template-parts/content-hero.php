@@ -25,7 +25,7 @@
             </div>
 		<?php endif; ?>
 	</div><!-- .hero-title -->
-	<div class="hero-img">
+	<div class="hero-img" style="background-image: url('<?php echo get_field('hero_image'); ?>');">
 	    
 	</div>
 </div>

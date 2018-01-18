@@ -4,27 +4,19 @@
             <h2>Project Timeline</h2>
         </div>
         <div class="timeline-heading-cta">
-            <a class="button" href="">Weekly Journals</a>
+            <a class="button" href="https://symphonyxr.wordpress.com/" target="_blank">Weekly Journals</a>
         </div>
     </div>
+    <?php if ( have_rows('timeline_entry', 11) ) : ?>
     <div class="timeline-bar">
-        <div class="timeline-bar-item tl-complete">
+        <?php while ( have_rows('timeline_entry', 11)) : the_row(); ?>
+        <div class="timeline-bar-item <?php if( get_sub_field('completed', 11) ): ?>tl-complete<?php endif; ?>">
             <p>
-                <span>January</span>
-                Shovel Snow
+                <span><?php the_sub_field('month', 11); ?></span>
+                <?php the_sub_field('event', 11); ?>
             </p>
         </div>
-        <div class="timeline-bar-item">
-            <p>
-                <span>March</span>
-                Go To The Beach
-            </p>
-        </div>
-        <div class="timeline-bar-item">
-            <p>
-                <span>June</span>
-                The Finish Line
-            </p>
-        </div>
+        <?php endwhile; ?>
     </div>
+    <?php endif; ?>
 </div>

@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){var t=$(".gallery").flickity({cellAlign:"center",contain:!0,wrapAround:!0,prevNextButtons:!1});t.on("staticClick.flickity",function(n,c,e,i){"number"==typeof i&&t.flickity("select",i)})});

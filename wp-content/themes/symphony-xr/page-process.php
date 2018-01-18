@@ -10,6 +10,8 @@ get_header(); ?>
 	<div id="main" class="site-main">
     
     <?php get_template_part( 'template-parts/content', 'hero' ); ?>
+           
+    <?php get_template_part( 'template-parts/content', 'timeline' ); ?>
             
 		<?php
 		while ( have_posts() ) : the_post();

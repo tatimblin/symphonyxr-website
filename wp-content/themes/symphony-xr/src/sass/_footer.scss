@@ -1,3 +1,105 @@
 // Footer
 // -------------------------
 
+.site-footer {
+    background-color: $lightBg;
+    &-map {
+        @include bigger ($screen-sm) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-col {
+                .menu {
+                    margin: 0;
+                }
+            }
+        }
+        max-width: $screen-md;
+        margin: 0 auto;
+        padding: $spacing $spacing/2;
+        &-col {
+            h2, p {
+                margin: 0;
+                a {
+                    color: $p-text;
+                    text-decoration: none;
+                }
+            }
+            .menu {
+                margin: $spacing/2 0 0 0;
+                list-style-type: none;
+                li {
+                    margin: 0.33em 0;
+                    a {
+                        color: $p-text;
+                        text-decoration: none;
+                        font-weight: $heavyWeight;
+                    }
+                }
+            }
+        }
+    }
+    .site-info {
+        padding: 5px 0;
+        text-align: center;
+        background-color: $midBg;
+    }
+}
+
+// Destination
+
+.destination {
+    display: flex;
+    flex-direction: column;
+    @include bigger($screen-md) {
+        flex-direction: row;
+    }
+    &-item {
+        position: relative;
+        width: 100%;
+        background-color: $lightBg;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1;
+        @include dark-overlay;
+        &:after{
+            background:rgba(0, 0, 0, 0.5);
+            transition: background 300ms 100ms $ease;
+        }
+        &:hover:after {
+            background:rgba(0, 0, 0, 0.75);
+        }
+        a {
+            text-decoration: none;
+        }
+        &-copy {
+            position: relative;
+            padding: $spacing*2 $spacing $spacing*1.5 $spacing/2;
+            h2, p {
+                color: $white;
+                text-decoration: none;
+            }
+            p {
+                margin: 0;
+                transform: translateY($spacing);
+                opacity: 0;
+                transition: all 300ms 150ms $ease;
+            }
+        }
+        &:hover .destination-item-copy p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &:first-child .destination-item-copy-inner { // lines up the page title in the footer-destination with content
+            @include bigger($screen-md) {
+                position: absolute;
+                width: $screen-md/2;
+                right: 0;
+                padding: 0 $spacing/2;
+            }
+        }
+    }
+}
+
+
+

@@ -75,6 +75,8 @@
         position: absolute;
         width: 100%; height: 400px;
         background-color: $lightBg;
+        background-size: cover;
+        background-position: center center;
         transform: translateY(-70px);
         z-index: -1;
     }
