@@ -10,8 +10,11 @@
  */
 
 ?>
-   
-    <?php get_template_part( 'template-parts/footer', 'gallery' ); ?>
+    <?php if (!is_single() ) { 
+    
+        get_template_part( 'template-parts/footer', 'gallery' ); 
+
+    } ?>
     
     <?php get_template_part( 'template-parts/footer', 'cta' ); ?>
     
@@ -29,7 +32,7 @@
 	            <h2><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h2>
 	            <p>
 	                info@symphonyxr.com<br>
-	                3401 Market St.,<br>
+	                3501 Market St.,<br>
 	                Philadelphia, PA 19104
 	            </p>
 	        </div>

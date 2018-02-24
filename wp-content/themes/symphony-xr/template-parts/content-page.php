@@ -10,9 +10,6 @@
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</div><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
@@ -23,6 +20,7 @@
 				'after'  => '</div>',
 			) );
 		?>
+		
 	</div><!-- .entry-content -->
 
 	<div class="entry-footer">

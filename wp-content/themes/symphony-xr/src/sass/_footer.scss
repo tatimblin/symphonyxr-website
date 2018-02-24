@@ -51,7 +51,7 @@
 .destination {
     display: flex;
     flex-direction: column;
-    @include bigger($screen-md) {
+    @include bigger($screen-sm) {
         flex-direction: row;
     }
     &-item {
@@ -78,6 +78,7 @@
             h2, p {
                 color: $white;
                 text-decoration: none;
+                transition: all 450ms 0ms $ease;
             }
             p {
                 margin: 0;
@@ -89,6 +90,9 @@
         &:hover .destination-item-copy p {
             transform: translateY(0);
             opacity: 1;
+        }
+        &:hover .destination-item-copy h2 {
+            transform: translateY(5px);
         }
         &:first-child .destination-item-copy-inner { // lines up the page title in the footer-destination with content
             @include bigger($screen-md) {

@@ -1,0 +1,78 @@
+// page-homepage.php
+
+.home-post {
+    &-img {
+        position: relative;
+        width: 100%; height: 250px;
+        background: $text;
+        overflow: hidden;
+        img {
+            position: absolute;
+            width: 100%;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -100;
+            opacity: 0;
+        }
+        .wp-post-image-in {
+            animation: blog-image 750ms 150ms $ease 1 forwards;
+        }
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        @include bigger($screen-sm) {
+            flex-direction: row;
+        }
+        transform: translateY(-70px);
+        max-width: $screen-md;
+        margin: 0 auto;
+        &-title {
+            padding: $spacing/2;
+            background-color: $bg;
+            @include bigger ($screen-sm) {
+                max-width: 50%;
+                padding: $spacing/2 $spacing;
+            }
+        }
+        &-prev {
+            margin: 0px $spacing/2 0 $spacing/2;
+            @include bigger($screen-sm) {
+                width: 50%;
+                margin: 100px $spacing/2 0 $spacing/2;
+            }
+        }
+        &-title, .home-post-content-prev {
+            .home-post-item {
+                padding: $spacing/2 0;
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                &-meta {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        color: $black;
+                        font-weight: $heavyWeight;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes blog-image {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        z-index: 0;
+    }
+    100% {
+        opacity: 1;
+        z-index: 0;
+    }
+}
+
+

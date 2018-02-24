@@ -35,7 +35,7 @@ $h-text: $brand;
 $p-text: $black;
 
 
-// ### SIZINGS ###
+// ### EASINGS ###
 // -----------------------------------------
 
 $ease: cubic-bezier(0.86, 0, 0.07, 1);
@@ -78,5 +78,61 @@ $container-lg: $screen-lg + $spacing * 2;
 @mixin smaller($device) {
     @media screen and (max-width: $device) {
         @content;
+    }
+}
+
+
+// ### ANIMATIONS ###
+// -----------------------------------------
+
+@keyframes strobe-padding {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    25% {
+        width: 0%;
+    }
+    50% {
+        width: 95%;
+    }
+    75% {
+        width: 95%;
+        right: 0;
+    }
+    100% {
+        width: 0%;
+        right: 0;
+    }
+}
+
+@keyframes width-expand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes scale-in {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
