@@ -22,7 +22,7 @@
     ?>
         <a href="<?php the_permalink(); ?>">
         <div class="process-blog-item process-blog-post">
-            <div>
+            <div class="process-blog-item-img">
                 <?php the_post_thumbnail(); ?>
             </div>
             <div>

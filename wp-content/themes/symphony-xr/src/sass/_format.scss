@@ -172,7 +172,7 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
-  margin: 0 0 0 $spacing/2;
+  margin: 0 $spacing 0 0;
   padding: 0 $spacing/2;
   color: $white;
   text-align: center;

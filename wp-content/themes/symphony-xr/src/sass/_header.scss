@@ -23,7 +23,7 @@
     z-index: 100;
     &:before {
         border-radius: inherit;
-        background-image: linear-gradient(rgba(242,242,242,0.33), rgba(242,242,242,0));
+        background-image: linear-gradient(rgba(242,242,242,1), rgba(242,242,242,0.2));
         content: '';    
         display: block;
         height: 100%;

@@ -1,0 +1,218 @@
+.team-org {
+    // Forced fix for hero.
+    transform:translate(0,-42px);
+    @include bigger ($screen-sm) { 
+        transform:translate(0,0);
+    }
+    @include bigger ($screen-md) { 
+        transform:translate(0,21px);
+    }
+    &-main {
+        position: relative;
+        //height: 50vw;
+        background-color: rgba(30, 30, 30, 1);
+        &-copy {
+            position: relative;
+            max-width: $screen-md;
+            margin: 0 auto;
+            padding: 25vw $spacing/2 $spacing*2 $spacing/2;
+            h3, p {
+                color: $bg;
+                z-index: 100;
+            }
+            p {
+                @include bigger($screen-md) {
+                    width: 50%;
+                }
+            }
+        }
+        &-bg {
+            position: absolute;
+            width: 100%; height: 100%;
+            @include bigger ($screen-xs) {
+                width: 75%;
+            }
+            @include bigger ($screen-sm) {
+                width: 66%;
+            }
+            @include bigger ($screen-md) {
+                width: 50%;
+            }
+            @include bigger ($screen-lg) {
+                width: 45%;
+            }
+            right: 0; top: 0;
+            background-image:
+                linear-gradient(
+                    to left,
+                    rgba(30, 30, 30, 0),
+                    rgba(30, 30, 30, 1)
+                ),
+                url(../img/asset/team-komschlies.JPG);
+            background-size: cover;
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0.33;
+        }
+        z-index: -2;
+    }
+}
+
+.team-org-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include bigger ($screen-sm) {
+        flex-direction: row;
+    }
+    &-item {
+        width: 100%;
+        padding: $spacing*2 $spacing/2 $spacing/2 $spacing/2;
+        //background-image: url(../img/asset/team-komschlies.JPG);
+        background-position: center center;
+        h3, p, a {
+            margin: 0;
+            color: $bg;
+            line-height: 2em;
+        }
+        h3 {
+            transform: translate(0, $spacing);
+            transition: transform 600ms 100ms $ease;
+        }
+        p {
+            transform: translate(0, 20px);
+            transition: transform 600ms 150ms $ease;
+        }
+        a {
+            font-size: 0.8em;
+            font-weight: $heavyWeight;
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 400ms 100ms $ease;
+        }
+        filter:grayscale(100%);
+        background-size: 100%;
+        transition: all 300ms 200ms linear;
+        &:hover {
+            filter:grayscale(0%);
+            background-size: 105%;
+            h3, p {
+                transform: translate(0, 0);
+            }
+            a {
+                opacity: 1;
+                transition: opacity 400ms 600ms $ease;
+            }
+        }
+    }
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $screen-md;
+    margin: 0 auto;
+    &-mem {
+        width: 100%;
+        @include bigger ($screen-xs) {
+            width: 50%;
+        }
+        @include bigger ($screen-md) {
+            width: 33.33%;
+        }
+        padding: $spacing/2;
+        &-avi {
+            position: relative;
+            width: 100%; 
+            height: $screen-xs/1.33;
+            background-color: #ccc;
+            background-size: cover;
+            background-position: center center;
+            
+            @include bigger ($screen-xs) {
+                height: $screen-sm/2.33;
+            }
+            @include bigger ($screen-md) {
+                height: $screen-md/3;
+            }
+            
+            &-soc {
+                display: flex;
+                justify-content: center;
+                width: 100%; height: 100%;
+                opacity:0;
+                transition: opacity 600ms 100ms $ease;
+                
+                &:before {
+                    content:'';
+                    position: absolute;
+                    width: 100%; height: 100%;
+                    background-color: rgba(50,50,50,0.66);
+                }
+                
+                &:hover {
+                    opacity:1;
+                    
+                    @for $i from 1 to 10 {
+                        a:nth-child(#{$i}) {
+                            opacity: 1;
+                            transition: all 600ms $i * 0.2s + 200ms $ease !important;
+                        }
+                    }
+                }
+                
+                a {
+                    align-self: center;
+                    padding: $spacing/3;
+                    opacity: 0;
+                    transition: all 600ms 0 $ease;
+                    z-index: 10;
+                    
+                    .icon-social {
+                        width: 16px; height: 16px;
+                    }
+                    
+                    .icon-twitter {
+                        background-image: url('../img/ui/social/twitter.svg');
+                    }
+                    
+                    .icon-instagram {
+                        background-image: url('../img/ui/social/instagram.svg');
+                    }
+                    
+                    .icon-codepen {
+                        background-image: url('../img/ui/social/codepen.svg');
+                    }
+                    
+                    .icon-email {
+                        background-image: url('../img/ui/social/email.svg');
+                    }
+                    
+                    .icon-github {
+                        background-image: url('../img/ui/social/github.svg');
+                    }
+                    
+                    .icon-generic {
+                        background-image: url('../img/ui/social/generic.svg');
+                    }
+                }
+            }
+        }
+        &-copy {
+            padding: $spacing/2 0;
+            h5 {
+                margin: 0 0 5px 0;
+                font-size: 1.5em;
+                letter-spacing: 0.75px;
+            }
+            h6  {
+                margin: 0 0 $spacing/2 0;
+                font-size: 0.75em;
+                font-weight: $heavyWeight;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

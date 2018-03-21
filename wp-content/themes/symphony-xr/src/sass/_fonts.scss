@@ -9,7 +9,7 @@ h1, h2, h3 {
     font-family: $heading;
     font-weight: $heavyWeight;
     line-height: 1.33em;
-    letter-spacing: 0.66px;
+    letter-spacing: 1.33px;
 }
 h4, h5, h6 {
     margin-bottom: $spacing / 2;
@@ -78,6 +78,11 @@ p, ul, li {
     font-family: $body;
     font-weight: $lightWeight;
     line-height: 1.66em;
+    letter-spacing: 1.2px;
+}
+
+a {
+    letter-spacing: 1.5px;
 }
 
 .post-head {
