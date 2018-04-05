@@ -19,11 +19,23 @@
             <?php the_title( '<h1 class="single-title-content">', '</h1>' ); ?>
         </div>
         
+        <?php // podcast audio
+            if ( is_singular( 'podcast' ) ) {
+        ?>
+            <div id="waveform"></div>
+            <div id="audio-file"><?php the_field('podcast'); ?></div>
+        <?php 
+            }
+        ?>
+        
         <div class="single-body">
             <?php the_content(); ?>
         </div>
         
-        <?php get_template_part( 'template-parts/footer', 'gallery' ); ?>
+        <?php 
+            get_template_part( 'template-parts/content', 'single-char' ); 
+            get_template_part( 'template-parts/footer', 'gallery' ); 
+        ?>
         
         <div class="single-foot">
             <?php

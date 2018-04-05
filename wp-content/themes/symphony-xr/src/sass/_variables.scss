@@ -24,14 +24,17 @@ $purple: #673AB7 ;
 $orange: #FF9800 ;
 $grey:   #607D8B ;
 
-$brand:  #00c1ff;
-$brandAlt: #FC3E7C;
+$brand2: #242343;
+$brand1: #392E50;
+$brand:  #744894;
+$brand-1: #A65E77;
+$brand-2: #8E6B7A;
 
 $bg: #f2f2f2 ;
-$lightBg: darken($bg, 10%);
-$midBg: darken($bg, 20%);
+$lightBg: lighten($brand2, 72%);
+$midBg: lighten($brand2, 65%);
 $text: $black;
-$h-text: $brand;
+$h-text: $brand1;
 $p-text: $black;
 
 
@@ -94,10 +97,10 @@ $container-lg: $screen-lg + $spacing * 2;
         width: 0%;
     }
     50% {
-        width: 95%;
+        width: 100%;
     }
     75% {
-        width: 95%;
+        width: 100%;
         right: 0;
     }
     100% {

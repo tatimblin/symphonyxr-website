@@ -63,11 +63,11 @@
         z-index: 1;
         @include dark-overlay;
         &:after{
-            background:rgba(0, 0, 0, 0.5);
+            background:rgba(36, 35, 67, 0.5);
             transition: background 300ms 100ms $ease;
         }
         &:hover:after {
-            background:rgba(0, 0, 0, 0.75);
+            background:rgba(36, 35, 67, 0.75);
         }
         a {
             text-decoration: none;

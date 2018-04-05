@@ -30,33 +30,40 @@
                     right: 0;
                     width: 75%;
                     padding:0 2.5%;
-                    //text-align: right;
+                    span {
+                        position: relative;
+                        padding: 0 5px;
+                        transition: all 600ms 350ms $ease;
+                        &:before {
+                            content:'';
+                            position: absolute;
+                            width: 0%; height: 1px;
+                            bottom: -0.66em;
+                            margin: 0 !important;
+                            background-color: $black;
+                            overflow: hidden !important;
+                        }
+                    }
                 }
             }
             p {
                 margin-top: 1em;
                 @include bigger ($screen-sm) {
                     margin-top: 6em;
-                    padding:0 5%;
+                    padding:0 $spacing;
                 }
             }
         }
-        h2:before {
-            content:'';
-            position: absolute;
-            width: 0%; height: 1px;
-            bottom: -0.66em;
-            margin: 0 2.5% !important;
-            background-color: $black;
-            overflow: hidden !important;
-        }
         &:hover {
-            h2:before {
+            h2 span {
+                background-color: $bg;
+            }
+            h2 span:before {
                 animation: strobe-padding 2000ms $ease 150ms infinite forwards;
             }
             img {
-                filter: saturate(100%) brightness(115%);
-                opacity: 0.9;
+                filter: saturate(100%) brightness(100%);
+                opacity: 1;
             }
         }
     }
@@ -130,6 +137,7 @@
             h1 {
                 text-transform: capitalize;
                 line-height: 1em;
+                pointer-events: none;
             }
         }
     }
@@ -203,6 +211,8 @@
 .single-podcast {
     .single-title {
         position: relative;
+        cursor: pointer;
+        
         &:before {
             content:'';
             position: absolute;
@@ -214,9 +224,9 @@
                 top: -190px - $spacing;
                 left: 0;
             }
-            background-color: $lightBg;
+            background-color: $white;
             border-radius: 50%;
-            border:1px solid $midBg;
+            border:1px solid $brand;
             
             background-image: url('../img/ui/btn-play.svg');
             background-size: 60%;
@@ -225,12 +235,76 @@
             transform: translate(0, 0.25em);
         }
     }
+    .single-title-pause:before {
+        background-image: url('../img/ui/btn-pause.svg');
+        background-position: 50% 50%;
+    }
     .single-body p {
-        column-count: 2;
+        column-count: 1;
+        
+        @include bigger($screen-sm) {
+            column-count: 2;
+        }
     }
 }
 
+#waveform {
+    max-width: $screen-md;
+    margin: 0 auto;
+    transform: translateY(-45px);
+    
+    @include bigger($screen-md) {
+        transform: translateY(-70px);
+    }
+}
 
+#audio-file {
+    display: none;
+}
+
+// Author
+
+.feat {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    &-item {
+        width: 50%;
+        
+        @include bigger($screen-sm) {
+            width: 33.33%;
+        }
+        @include bigger($screen-md) {
+            width: 25%;
+        }
+        
+        a {
+            text-decoration: none;
+            
+            &:hover {
+                .feat-item-img {
+                    border: 2px solid $brand;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            column-count: 1 !important;
+            font-size: 0.9em;
+            color: $black;
+        }
+        &-img {
+            width: 80px; height: 80px;
+            margin: $spacing/2 auto;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+            border: 2px solid $bg;
+            transition: all 900ms 100ms $ease;
+        }
+    }
+}
 
 
 

@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 h4, h5, h6 {
     margin-bottom: $spacing / 2;
-    //color: lighten($text, 20%);
+    color: $text;
     font-family: $body;
     font-weight: $midWeight;
     line-height: 1.25em;

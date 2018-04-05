@@ -11,9 +11,11 @@
 
 <div class="hero">
     <div class="hero-title">
+        <div class="hero-title-content-wrap">
         <div class="hero-title-content">
             <h4><?php echo get_field('hero_title_meta'); ?></h4>
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</div>
 		</div>
 		<?php if( have_rows('hero_cta') ): ?>
             <div class="hero-title-cta">
@@ -29,3 +31,5 @@
 	    
 	</div>
 </div>
+
+<div class="page-content">

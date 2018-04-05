@@ -69,4 +69,41 @@ if ($("body").hasClass("page-template-page-process")) {
     
 }
     
+if ($("body").hasClass("single-podcast")) {
+    
+    var wavesurfer = WaveSurfer.create({
+        container: document.querySelector('#waveform'),
+        waveColor: '#E1E0EF',
+        progressColor: '#744894',
+        hideScrollbar: true,
+        //barWidth: 1
+    });
+
+    // get podcast audio file
+    wavesurfer.load( $( "#audio-file" ).html() );
+    
+    // play/pause button
+    $('.single-title').on( 'click', function() {
+        wavesurfer.playPause();
+        $('.single-title').toggleClass('single-title-pause');
+    });
+    
+    // resizes with browser
+    var responsiveWave = wavesurfer.util.debounce(function() {
+      wavesurfer.empty();
+      wavesurfer.drawBuffer();
+    }, 150);
+
+    window.addEventListener('resize', responsiveWave);
+}
+
+// Images loaded
+$('#main').imagesLoaded()
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+    $('.hero-img').addClass('loaded');
+    $('.hero-title-content-wrap').addClass('loaded');
+    $('.page-content').addClass('loaded');
+  });
+    
 }); // doc ready

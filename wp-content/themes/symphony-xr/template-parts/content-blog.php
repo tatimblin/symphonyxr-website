@@ -26,7 +26,7 @@
                 <?php the_post_thumbnail(); ?>
             </div>
             <div>
-                <h2><?php the_title(); ?></h2>
+                <h2><span><?php the_title(); ?></span></h2>
                 <?php the_excerpt(); ?>
             </div>
         </div>

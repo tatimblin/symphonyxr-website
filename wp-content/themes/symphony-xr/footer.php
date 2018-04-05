@@ -44,6 +44,8 @@
 			Copyright &copy; <?php echo date('Y'); ?> | timblin.co
 		</div><!-- .site-info -->
 	</div><!-- .site-footer -->
+	
+</div><!-- .page-content (see content-hero.php) -->
 
 </div><!-- #page -->
 
