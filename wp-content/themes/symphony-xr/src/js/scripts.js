@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    
+$('.site-header-mobile').on('click', function() {
+    $('.site-header-mobile').toggleClass('open-nav');
+    $('.main-navigation').toggleClass('open-nav');
+});
 
 // If Simple Image Gallery
 var galleryExists = document.getElementById("footer-gallery");

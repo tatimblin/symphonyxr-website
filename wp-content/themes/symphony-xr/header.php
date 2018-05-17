@@ -47,10 +47,14 @@
 	<div class="site-header">
 		<div class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
-                SXR
+                <h3>SXR</h3>
             </a>
 		</div><!-- .site-title -->
-
+        <div class="site-header-mobile">
+            <div class="site-header-mobile-bar"></div>
+            <div class="site-header-mobile-bar"></div>
+            <div class="site-header-mobile-bar"></div>
+        </div>
 		<div class="main-navigation">
 			
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
