@@ -59,7 +59,7 @@
         width: 100%;
         background-color: $lightBg;
         background-size: cover;
-        background-position: center center;
+        background-position: center -30px;
         z-index: 1;
         @include dark-overlay;
         &:after{

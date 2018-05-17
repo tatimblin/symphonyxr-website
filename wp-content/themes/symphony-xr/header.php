@@ -39,6 +39,10 @@
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader" href="#content">Skip to content</a>
+	
+	<?php if ( is_page_template( 'page-experience.php' ) ) {
+        get_template_part( 'template-parts/experience/video', 'banner' );
+    } ?>
 
 	<div class="site-header">
 		<div class="site-title">

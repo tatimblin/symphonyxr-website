@@ -85,7 +85,7 @@ function starter_theme_scripts() {
 	function load_js() {
 		wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), false, false);
 		wp_deregister_script('jquery');
-		wp_enqueue_script('jquery', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js', array(), null, true);
+		wp_enqueue_script('jquery', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, true);
 		wp_enqueue_script('plugins', get_template_directory_uri() . '/js/plugins.js', array( 'jquery' ), null, true);
 		wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), null, true);
 	}
@@ -226,3 +226,7 @@ add_action( 'init', 'teammate_post_type', 0 );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

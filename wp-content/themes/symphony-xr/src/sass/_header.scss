@@ -75,6 +75,11 @@
 
 .hero {
     height: 484px;
+    
+    @include bigger ($screen-lg) {
+        margin-bottom: $spacing*3;
+    }
+    
     &-title {
         max-width: $screen-md;
         margin: 0 auto;
@@ -113,13 +118,17 @@
     &-img {
         position: absolute;
         width: 100%; height: 400px;
-        background-color: $lightBg;
-        background-size: cover;
+        //background-color: $lightBg;
         background-position: center center;
         opacity: 0;
         transition: all 600ms 50ms $ease;
         transform: translateY(-70px);
         z-index: -1;
+        
+        @include bigger ($screen-lg) {
+            background-size: $screen-lg;
+            background-repeat: no-repeat;
+        }
         
         &.loaded {
             opacity: 1;

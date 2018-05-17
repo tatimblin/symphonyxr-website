@@ -32,7 +32,7 @@
 	            <h2><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h2>
 	            <p>
 	                info@symphonyxr.com<br>
-	                3501 Market St.,<br>
+	                3501 Market St.<br>
 	                Philadelphia, PA 19104
 	            </p>
 	        </div>
@@ -41,7 +41,7 @@
 	        </div>
 	    </div>
 		<div class="site-info">
-			Copyright &copy; <?php echo date('Y'); ?> | timblin.co
+			Copyright &copy; <?php echo date('Y'); ?> | <a href="http://timblin.co/">timblin.co</a>
 		</div><!-- .site-info -->
 	</div><!-- .site-footer -->
 	

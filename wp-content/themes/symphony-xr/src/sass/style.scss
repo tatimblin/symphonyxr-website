@@ -13,7 +13,8 @@
 @import '_fonts.scss';
 @import '_plugins.scss';
 
-@import '_homepage.scss';
-@import '_product.scss';
-@import '_team.scss';
-@import '_blog.scss';
+@import 'page/_homepage.scss';
+@import 'page/_product.scss';
+@import 'page/_team.scss';
+@import 'page/_blog.scss';
+@import 'page/_experience.scss';
